@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>欢迎登录</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="login-header">
+			<div class="col-md-7 ptb-one clearfix header-height" id="title">
+				<img class="pull-left" src="images/logo.png" height="50" alt="logo">
+				<h1 class="title pull-left">枕上诗书</h1>
+			</div>
+		</div>
+	</header>
+	
+	<div class="row">
+		<div class="parent col-xs-12">
+			<div id="left-text" class="col-sm-7">
+				<p>一个爱书的人，他必定不致于缺少一个忠实的朋友，一个良好的老师，一个可爱的伴侣，一个温情的安慰者。</p>
+				<p class="text-right">——巴罗</p>
+			</div>
+			<div id="login-frame" class="col-sm-3">
+				<form action="#" class="form-horizontal">
+					<frameset>
+						<legend>欢迎登录<a href="#" class="pull-right a-register">立即注册</a></legend>
+						<div class="form-group">
+							<div class="col-xs-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<input type="text" id="username" name="user.username" placeholder="用户名" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-12">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+									<input type="password" id="password" name="user.password" placeholder="密码" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-12">
+								<div class="checkbox col-xs-6">
+									<label>
+									<input type="checkbox">记住密码
+									</label>
+								</div>
+								<div class="col-xs-6">
+									<a href="#" class="pull-right a-forget" data-toggle="modal" data-target="#loginModal">忘记密码？</a>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-12">
+								<a href="main.html" class="btn btn-primary btn-block letter-spacing">登录</a>
+							</div>
+						</div>
+					</frameset>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<footer>
+		<div class="copyright">
+			<p>Copyright © TEAM8 All Rights Reserved</p>
+		</div>
+	</footer>
+
+	<!-- Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="loginModalLabel">提示信息</h4>
+	      </div>
+	      <div class="modal-body">
+                 <div class="row">
+                  <div class="col-xs-2">
+                    <div id="msgPicture"><span class='pull-right glyphicon glyphicon-ok-sign'></span></div>
+                  </div>
+                  <div class="col-xs-10">
+                   	 <div id="msgWord"><h4 class='title'>已经为您发送邮件提示密码信息,请查收</h4></div>
+                  </div>
+                </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

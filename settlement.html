@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>图书结算</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header class="navbar" id="top" role="banner">
+		<div class="container">
+			<div class="navbar-header pull-left">
+				<a href="./main.html" class="navbar-brand">枕上诗书</a>
+			</div>
+			<nav role="navigation">
+				<ul class="nav navbar-nav navbar-right pull-right">
+					<li><a class="login" href="login.html">登录</a></li>
+					<li class="mr-one"><a href="register.html">注册</a></li>
+					<li class="mr-one"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> 购书单</a></li>
+					<!-- <li class="hidden-xs"><a href="#">联系我们</a></li> -->
+					<li class="hidden-xs"><a href="#">帮助中心</a></li>
+					<li class="cursor-shape"><a data-toggle="modal" data-target="#feedbackModal">反馈</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div id="fakeTop"></div>
+
+	<div class="container" id="main">
+		<div class="row header">
+			<div class="col-md-7 ptb-one clearfix" id="title">
+				<img class="pull-left" src="images/logo.png" height="50" alt="logo">
+				<h1 class="title pull-left">枕上诗书</h1>
+			</div>
+			<div class="search col-md-5 ptb-one mt-12 clearfix">
+				<div class="col-lg-10 pull-right">
+					<div class="input-group col-sm-10">
+						<input type="text" class="form-control" placeholder="书名、作者、ISBN">
+						<span class="input-group-btn">
+							<button class="btn btn-primary" type="button">搜索</button>
+						</span>
+					</div>
+					<!-- /input-group -->
+				</div>
+				<!-- /.col-lg-6 -->
+			</div>
+		</div>
+		<!-- /row header -->
+
+		<div class="row content">
+			<div class="col-xs-12">
+				<div class="addr-title-settlement">
+					<strong>选择收货地址</strong>
+				</div>
+				<div class="address-panel">
+					<!-- 收货地址信息 -->
+					<input type="hidden" name="prov" id="addr-prov">
+					<input type="hidden" name="city" id="addr-city">
+					<input type="hidden" name="name" id="addr-name">
+					<input type="hidden" name="dist" id="addr-dist">
+					<input type="hidden" name="town" id="addr-town">
+					<input type="hidden" name="street" id="addr-street">
+					<input type="hidden" name="phone" id="addr-phone">
+					<!-- 收货地址列表 -->
+					<div class="shipping-address">
+						<div class="addr addr-active" data-id="addr01">
+							<div class="inner">
+								<div class="addr-hd" title="湖南 长沙 (魏雅婷收)">
+									<span class="prov">湖南</span>
+									<span class="city">长沙</span>
+									<span>（</span>
+									<span class="name">魏雅婷</span>
+									<span> 收）</span>
+								</div>
+								<div title="天心文源 中南大学铁道校区新一舍" class="addr-bd">
+									<span class="dist">天心</span>
+									<span class="town">文源</span>
+									<span class="street">中南大学铁道校区新一舍</span>
+									<span class="phone">13113131311</span>
+								</div>
+							</div>
+							<!-- /.inner -->
+							<ins class="curmarker"></ins>
+						</div>
+						<!-- /.addr -->
+					</div>
+					<!-- /.shipping-address -->
+				</div>
+				<!-- /address-panel -->
+				<div id="modifyAddr">
+					<div class="col-xs-12 clearfix">
+						<div class="col-xs-2">
+							<a class="btn btn-primary btn-block" data-toggle="modal" data-target="#modifyModal">修改地址</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="info-title-settlement">
+					<strong>确认订单信息</strong>
+				</div>
+				<div id="cart" class="mt-one clearfix">
+					<div class="thead">
+						<div class="item clearfix">
+							<span class="col-sm-5">商品信息</span>
+							<span class="col-sm-2 text-center">单价（元）</span>
+							<span class="col-sm-2">数量</span>
+							<span class="col-sm-1">折扣</span>
+							<span class="col-sm-2 hidden-xs">金额</span>
+						</div>
+					</div>
+					<div class="tbody">
+						<div class="item clearfix">
+							<div class="col-sm-5 info">
+								<div class="p-img">
+									<a href="./item.html">
+										<img src="./itemPhoto/item(1).jpg" class="itempic J_ItemImg">
+									</a>
+								</div>
+								<div class="p-name">
+									<a href="./item.html">小王子</a>
+								</div>
+							</div>
+							<div class="col-sm-2 p-price">
+								<span>¥32.00</span>
+							</div>
+							<div class="col-sm-2 p-num">
+								1
+							</div>
+							<div class="col-sm-1 text-center">
+								<span>8折</span>
+							</div>
+							<div class="col-sm-2 hidden-xs p-sum price  text-center">
+								<span>¥</span>
+								<strong>25.60</strong>
+							</div>
+						</div>
+						<!-- /.item -->
+						<div class="item clearfix">
+							<div class="col-sm-5 info">
+								<div class="p-img">
+									<a href="./item.html">
+										<img src="./itemPhoto/item(3).jpg" class="itempic J_ItemImg">
+									</a>
+								</div>
+								<div class="p-name">
+									<a href="./item.html">三体</a>
+								</div>
+							</div>
+							<div class="col-sm-2 p-price">
+								<span>¥40.00</span>
+							</div>
+							<div class="col-sm-2 p-num">
+								1
+							</div>
+							<div class="col-sm-1 text-center">
+								<span>9折</span>
+							</div>
+							<div class="col-sm-2 hidden-xs p-sum price  text-center">
+								<span>¥</span>
+								<strong>36.00</strong>
+							</div>
+						</div>
+						<!-- /.item -->
+
+						<div class="cart-total">
+							<div class="pull-right">
+								<a class="btn btn-lg btn-primary" href="#">
+									提交订单 <b class="glyphicon glyphicon-chevron-right"></b>
+								</a>
+							</div>
+							<div class="total pull-right">
+								总计：
+								<strong class="price" id="finalPrice" data-bind="1753.00">¥93.60</strong>
+							</div>
+						</div>
+						<!-- /cart-total -->
+					</div>
+					<!-- /tbody -->
+				</div>
+				<!-- /cart -->
+			</div>
+			<!-- /col-xs-12 -->
+		</div>
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+
+	<!-- Modal -->
+	<div class="modal fade" id="modifyModal" tabindex="-1" role="dialog" aria-labelledby="modifyModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="modifyModalLabel">修改地址信息</h4>
+				</div>
+				<div class="modal-body clearfix">
+					<div class="col-xs-12 form-horizontal">
+						<div class="form-group">
+							<div class="col-xs-3 pull-left text-right left-title">
+								默认收货地址：
+							</div>
+							<div class="col-xs-3">
+								<input type="hidden" id="pre_province" value="广西壮族自治区">
+								<input type="hidden" id="pre_city" value="桂林市">
+								<input type="hidden" id="pre_district" value="叠彩区">
+								<select class="form-control" id="province-sel">
+								</select>
+							</div>
+							<div class="col-xs-3">
+								<select class="form-control" id="city-sel">
+								</select>
+							</div>
+							<div class="col-xs-3">
+								<select class="form-control" id="district-sel">
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-offset-3 col-xs-9">
+								<input type="text" id="address" placeholder="详细位置信息" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-3 pull-left text-right left-title">
+								收货人：
+							</div>
+							<div class="col-xs-4">
+								<input type="text" id="receiver" placeholder="收货人" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-3 pull-left text-right left-title">
+								电话号码：
+							</div>
+							<div class="col-xs-4">
+								<input type="text" id="phoneNumber" placeholder="电话号码" class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="page-bottom clearfix">
+			<div class="col-sm-2">
+			</div>
+			<div class="copyright col-sm-8">
+				<!-- <img class="pull-left" src="images/title.png" height="59" width="40" alt="title"> -->
+				<p>Copyright © TEAM8 All Rights Reserved</p>
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+		<!-- /row -->
+	</footer>
+
+	<script src="./js/jquery-1.10.2.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/settlement.js"></script>
+	<script src="./js/city.js"></script>
+</body>
+</html>
