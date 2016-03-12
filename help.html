@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>帮助中心</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header class="navbar" id="top" role="banner">
+		<div class="container">
+			<div class="navbar-header pull-left">
+				<a href="./main.html" class="navbar-brand">枕上诗书</a>
+			</div>
+			<nav role="navigation">
+				<ul class="nav navbar-nav navbar-right pull-right">
+					<li><a class="login" href="login.html">登录</a></li>
+					<li class="mr-one"><a href="register.html">注册</a></li>
+					<li class="mr-one"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> 购书单</a></li>
+					<!-- <li class="hidden-xs"><a href="#">联系我们</a></li> -->
+					<li class="hidden-xs"><a href="help.html">帮助中心</a></li>
+					<li class="cursor-shape"><a data-toggle="modal" data-target="#feedbackModal">反馈</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div id="fakeTop"></div>
+
+	<div class="container" id="main">
+		<div class="row header">
+			<div class="col-md-3 ptb-one clearfix" id="title">
+				<img class="pull-left" src="images/logo.png" height="50" alt="logo">
+				<h1 class="title pull-left">枕上诗书</h1>
+			</div>
+			<div class="col-md-4">
+				<h3 class="welcome-reg">常见问题</h3>
+			</div>
+			<div class="search col-md-5 ptb-one mt-12 clearfix">
+				<div class="col-lg-10 pull-right">
+					<div class="input-group col-sm-10">
+						<input type="text" class="form-control" placeholder="书名、作者、ISBN">
+						<span class="input-group-btn">
+							<button class="btn btn-primary" type="button">搜索</button>
+						</span>
+					</div>
+					<!-- /input-group -->
+				</div>
+				<!-- /.col-lg-6 -->
+			</div>	
+			<!-- /search -->
+		</div>
+		<!-- /row header -->
+
+		<div class="row content">
+			<div class="col-xs-12">
+				<div class="question-title">
+					<strong>1.忘记密码该怎么办？</strong>
+				</div>
+				<div class="question-content col-xs-8">
+					<p class="text-indent">亲，遇到这种事情完全不用担心哦，只要进入登录界面，在账号栏填写完全账号之后，再点击忘记密码，我们就会将带上密码的邮件发到您一开始注册所用的邮箱，这样子你就可以快速地得到您的密码哦。所以在注册的时候一定要妥善填写自己的邮箱哦。</p>
+				</div>
+			</div>
+			<!-- /col-xs-12 -->
+			<div class="col-xs-12">
+				<div class="question-title">
+					<strong>2.注册账户一直不成功怎么办？</strong>
+				</div>
+				<div class="question-content col-xs-8">
+					<p class="text-indent">我们的注册账户界面内容大多数都是必要填写的，但还是还有很多是可以为空的，比如默认地址信息，爱好以及收货人都不是必填的，而且即使错误，我们也会保存原来填写的信息，所以亲们不用担心再输入一遍噢。快快来注册我们的网站吧O(∩_∩)O</p>
+				</div>
+			</div>
+			<!-- /col-xs-12 -->
+			<div class="col-xs-12">
+				<div class="question-title">
+					<strong>3.账户显示未激活怎么办？</strong>
+				</div>
+				<div class="question-content col-xs-8">
+					<p class="text-indent">账户未激活是说明注册用户成功后在激活界面并没有成功输入激活码，这里激活码是为了防止恶意注册所设置，会发送到您给的邮箱，只要打开邮箱就能收到邮件，可能这个发邮件的过程中会有点慢，请大家耐心等待。得到激活码之后输入就可以完成激活了。</p>
+				</div>
+			</div>
+			<!-- /col-xs-12 -->
+			<div class="col-xs-12">
+				<div class="question-title">
+					<strong>4.如何查找想要的商品？</strong>
+				</div>
+				<div class="question-content col-xs-8">
+					<p class="text-indent">页面顶部的搜索栏，会为你找到你所寻找的书籍，不管你输入的是书名，ISBN，或者是作者名。</p>
+					<p class="text-indent">页面左侧的分类栏，会按照分类，为您显示书籍信息。</p>
+					<p class="text-indent">如果您已经登录，主页面的为您推荐栏会给您带来新的惊喜。</p>
+				</div>
+			</div>
+			<!-- /col-xs-12 -->
+		</div>
+		<!-- /row content -->
+	</div>
+	<!-- /container main -->
+
+	<footer>
+		<div class="page-bottom clearfix">
+			<div class="col-sm-2">
+			</div>
+			<div class="copyright col-sm-8">
+				<!-- <img class="pull-left" src="images/title.png" height="59" width="40" alt="title"> -->
+				<p>Copyright © TEAM8 All Rights Reserved</p>
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+		<!-- /row -->
+	</footer>
+</body>
+</html>
